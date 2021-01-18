@@ -1,0 +1,9 @@
+# Site settings
+title: Great New Blog Title
+author:
+  name: Yanan Gong
+  email: yg3ca@virginia.edu
+description: "Great site about Jekyll on GH-Pages."
+
+# Build settings
+remote_theme: jekyll/minima
