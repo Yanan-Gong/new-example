@@ -1,9 +1,13 @@
 ---
-layout: page
-title: About
+layout: dark
+title: About me
+example: Example text in this variable.
 ---
 
-Some Markdown content describing your site.
+This page descibes the amazing {{ site.title }} by {{ site.author}}.
+{{ page.example }}
+
+{% include big-cat.html %}
 
 ## About About Pages
 
