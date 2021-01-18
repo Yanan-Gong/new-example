@@ -1,5 +1,5 @@
 ---
-layout: dark
+layout: page
 title: About me
 example: Example text in this variable.
 ---
@@ -17,3 +17,22 @@ It is your opportunity to let us know all the details "about" your project:
 - focus and topic area
 - people involved
 - code and projects used
+
+{% for animal in site.data.animal %}
+- The {{ animal.name }} is a {{ animal.size }} animal.
+{% endfor %}
+
+## Large animals are best!
+
+{% for animal in site.data.animal %}
+{% if animal.size == "large" %}- <strong style="color: {{ animal.color }};">{{ animal.name }}</strong>
+{% else %}- <small>{{ animal.name }} </small>
+{% endif %}
+{% endfor %}
+
+## Samll animals only
+
+{% assign small_animals = site.data.animal | where: "size", "small" %}
+{% for animal in small_animals %}
+- {{ animal.name | upcase }}
+{% endfor %}
